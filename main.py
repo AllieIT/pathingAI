@@ -14,6 +14,7 @@ GEN = 0
 MAX_GEN = 50
 SERIES_DATA = []
 
+
 def chromosome_create(steps):
     chromosome = ''
     for i in range(steps):
@@ -205,5 +206,6 @@ def main():
     image_files = [image_folder + '/' + img for img in os.listdir(image_folder) if img.endswith(".jpg")]
     clip = moviepy.video.io.ImageSequenceClip.ImageSequenceClip(image_files, fps=fps)
     clip.write_videofile(f"{SERIES_DATA[0]}.mp4")
+
 
 main()
